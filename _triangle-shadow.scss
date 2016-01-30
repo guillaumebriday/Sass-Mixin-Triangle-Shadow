@@ -1,0 +1,40 @@
+@mixin triangle-shadow($position, $offset, $size, $color, $box-shadow-pos, $box-shadow-blur, $box-shadow-color){
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        transform-origin: 50% 50%;
+        border: $size solid;
+
+        @if ($position == "top"){
+            top: (-1 * $size) + 1;
+            left: $offset;
+            transform: translateX(-50%) rotate(-45deg);
+            border-color: $color $color transparent transparent;
+            box-shadow: $box-shadow-pos (-1 * $box-shadow-pos) $box-shadow-blur 0 $box-shadow-color;
+        }
+        @else if ($position == "right"){
+            right: (-1 * $size) + 1;
+            top: $offset;
+            transform: translateY(-50%) rotate(-45deg);
+            border-color: transparent $color $color transparent;
+            box-shadow: $box-shadow-pos $box-shadow-pos $box-shadow-blur 0 $box-shadow-color;
+        }
+        @else if ($position == "bottom"){
+            bottom: (-1 * $size) + 1;
+            left: $offset;
+            transform: translateX(-50%) rotate(-45deg);
+            border-color: transparent transparent $color $color;
+            box-shadow: (-1 * $box-shadow-pos) $box-shadow-pos $box-shadow-blur 0 $box-shadow-color;
+        }
+        @else if ($position == "left"){
+            left: (-1 * $size) + 1;
+            top: $offset;
+            transform: translateY(-50%) rotate(-45deg);
+            border-color: $color transparent transparent $color;
+            box-shadow: (-1 * $box-shadow-pos) (-1 * $box-shadow-pos) $box-shadow-blur 0 $box-shadow-color;
+        }
+    }
+}
