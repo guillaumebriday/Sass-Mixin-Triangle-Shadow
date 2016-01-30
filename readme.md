@@ -5,6 +5,8 @@ Cette mixin pour [SASS](http://sass-lang.com/) permet de les générer automatiq
 
 [DEMO](http://guillaumebriday.fr/lab/Sass-Mixin-Triangle-Shadow/)
 
+[Codepen.io](http://codepen.io/ZiiCEagle/pen/obyGaX)
+
 *Il est important de noter qu'il y aura sûrement des ajustements à faire selon vos besoins.*
 
 ## Utilisation
