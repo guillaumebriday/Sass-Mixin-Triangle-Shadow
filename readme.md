@@ -33,7 +33,7 @@ Pour mettre un triangle sur l'élément qui a la class "selector" par exemple, i
 }
 ```
 
-Vous pouvez également surchargé un triangle à une autre position, de la manière suivante par exemple :
+Vous pouvez également surcharger un triangle à une autre position, de la manière suivante par exemple :
 
 ```css
 $color-shadow: #337ab7;
