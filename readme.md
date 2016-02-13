@@ -33,6 +33,24 @@ Pour mettre un triangle sur l'élément qui a la class "selector" par exemple, i
 }
 ```
 
-## Improvements
+Vous pouvez également surchargé un triangle à une autre position, de la manière suivante par exemple :
+
+```css
+$color-shadow: #337ab7;
+$color-triangle: #282b2e;
+
+.selector {
+    box-shadow: 0px 0px 6px 3px $color-shadow;
+    @include triangle-shadow('top', 50%, 10px, $color-triangle, 3px, 4px, $color-shadow);
+}
+
+@media screen and (min-width: 750px){
+    .selector {
+        @include triangle-shadow('bottom', 50%, 10px, $color-triangle, 3px, 4px, $color-shadow);
+    }
+}
+```
+
+## Améliorations
 
 N'hésitez pas à proposer des modifications ou des améliorations que j'ajouterais avec plaisir mais également à me contacter pour avec des informations complémentaires ou me remonter un bug.

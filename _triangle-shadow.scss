@@ -11,6 +11,8 @@
         @if ($position == "top"){
             top: (-1 * $size) + 1;
             left: $offset;
+            bottom: auto;
+            right: auto;
             transform: translateX(-50%) rotate(-45deg);
             border-color: $color $color transparent transparent;
             box-shadow: $box-shadow-pos (-1 * $box-shadow-pos) $box-shadow-blur 0 $box-shadow-color;
@@ -18,6 +20,8 @@
         @else if ($position == "right"){
             right: (-1 * $size) + 1;
             top: $offset;
+            left: auto;
+            bottom: auto;
             transform: translateY(-50%) rotate(-45deg);
             border-color: transparent $color $color transparent;
             box-shadow: $box-shadow-pos $box-shadow-pos $box-shadow-blur 0 $box-shadow-color;
@@ -25,6 +29,8 @@
         @else if ($position == "bottom"){
             bottom: (-1 * $size) + 1;
             left: $offset;
+            top: auto;
+            right: auto;
             transform: translateX(-50%) rotate(-45deg);
             border-color: transparent transparent $color $color;
             box-shadow: (-1 * $box-shadow-pos) $box-shadow-pos $box-shadow-blur 0 $box-shadow-color;
@@ -32,6 +38,8 @@
         @else if ($position == "left"){
             left: (-1 * $size) + 1;
             top: $offset;
+            right: auto;
+            bottom: auto;
             transform: translateY(-50%) rotate(-45deg);
             border-color: $color transparent transparent $color;
             box-shadow: (-1 * $box-shadow-pos) (-1 * $box-shadow-pos) $box-shadow-blur 0 $box-shadow-color;
